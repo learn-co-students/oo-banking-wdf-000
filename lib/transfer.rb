@@ -32,7 +32,7 @@ class Transfer
       sender.deposit(self.amount)
       self.status = "reversed"
     else
-      "Cannot reverse transfer that has not been executed."
+      "Cannot reverse transaction that has not been executed."
     end
   end
 end
