@@ -1,7 +1,8 @@
 class BankAccount
 
-	attr_reader :name
 	attr_accessor :balance, :status
+	attr_reader :name
+	# private, can't change name
 
 	def initialize(name)
 		@name = name
@@ -24,8 +25,4 @@ class BankAccount
 	def close_account
 		@status = "closed"
 	end
-
-	private
-	attr_writer :name
-
 end

@@ -1,7 +1,8 @@
 class Transfer
-  # your code here
-  attr_reader :sender, :receiver, :amount
+
   attr_accessor :status
+  attr_reader :sender, :receiver, :amount
+  # attr_reader is private, can't change sender. receiver, amount
   
   def initialize(sender, receiver, amount)
   	@sender = sender
@@ -30,10 +31,6 @@ class Transfer
       @sender.balance += @amount
       @receiver.balance -= @amount
       @status = "reversed"
-
     end
   end
-
-  private
-  attr_writer :sender, :receiver, :amount
 end
